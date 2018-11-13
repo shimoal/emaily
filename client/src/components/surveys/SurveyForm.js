@@ -67,4 +67,8 @@ function validate(values) {
 	return errors;
 }
 
-export default reduxForm({ form: "surveyForm", validate })(SurveyForm);
+export default reduxForm({
+	form: "surveyForm",
+	validate,
+	destroyOnUnmount: false
+})(SurveyForm);
